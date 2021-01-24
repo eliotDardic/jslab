@@ -1,0 +1,14 @@
+{
+  "name": "ex1pcg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ex1.js",
+  "scripts": {
+    "test": "fff"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
