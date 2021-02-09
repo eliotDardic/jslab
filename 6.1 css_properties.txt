@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: 'Roboto+Mono',sans-serif;
+    }
+    .upper-line {
+      color:black;
+      border:2px solid red;
+      border-radius: 10px
+      
+    }
+    .middle-line {
+      color:blue;font-size: 22px;
+      
+    }
+    .lower-line {
+      background-color:black; color: white;
+      box-shadow: 3px 3px 3px #e21a1a
+      
+  </style>
+</head>
+<body>
+  <div>
+    <h2 class="upper-line" >Hello Word</h2>
+  </div>
+  <div>
+    <h2 class="middle-line" >Hello Word</h2>
+  </div>
+  <div>
+    <h2 class="lower-line" >Hello Word</h2>
+  </div>
+ 
+
+ 
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>19.5 spiners</title>
+  </head>
+  <style>
+    body {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+    }
+    .spiner-1 {
+      /* background: white; */
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      border: 4px solid grey;
+      border-top: 4px solid red;
+      animation: rotate 1s linear infinite;
+    }
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .spiner-2 {
+      /* background: white; */
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      /* border: 4px solid grey; */
+      border-top: 4px solid rgba(0, 4, 255, 0.692);
+      animation: rotate 1s linear infinite;
+    }
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .spiner-3 {
+      display: flex;
+      justify-content: space-between;
+      width: 120px;
+    }
+
+    .dot-1,
+    .dot-2,
+    .dot-3 {
+      background: red;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      animation: change-color 1s infinite;
+    }
+    @keyframes change-color {
+      to {
+        background: gray;
+      }
+    }
+    .dot-2 {
+      animation-delay: 0.33s;
+    }
+    .dot-3 {
+      animation-delay: 0.66s;
+    }
+
+    .spiner-4 {
+      display: flex;
+      justify-content: space-between;
+      width: 120px;
+    }
+
+    .dot-4,
+    .dot-5,
+    .dot-6 {
+      background: red;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      animation: translateY 1s infinite;
+    }
+    @keyframes translateY {
+      to {
+        transform: translateY(30px);
+      }
+    }
+    .dot-5 {
+      animation-delay: 0.33s;
+    }
+    .dot-6 {
+      animation-delay: 0.66s;
+    }
+  </style>
+  <body>
+    <div class="spiner-1"></div>
+    <div class="spiner-2"></div>
+    <div class="spiner-3">
+      <div class="dot-1"></div>
+      <div class="dot-2"></div>
+      <div class="dot-3"></div>
+    </div>
+    <div class="spiner-4">
+      <div class="dot-4"></div>
+      <div class="dot-5"></div>
+      <div class="dot-6"></div>
+    </div>
+  </body>
+</html>

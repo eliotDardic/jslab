@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animations 193</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0%;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .btn {
+      display: inline-block;
+      border: 2px solid black;
+      padding: 40px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .translate-y::before {
+      content: 'yeah!';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: red;
+      top: 0%;
+      left: 0;
+      transform: translateY(-105%);
+      transition: all 1s;
+    }
+    .translate-y:hover::before {
+      transform: translateY(0);
+    }
+    .translate-x::before {
+      content: 'translateX';
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: black;
+      top: 0%;
+      left: 0;
+      transform: translatex(-105%);
+      transition: all 1s;
+      z-index: -1;
+    }
+    .translate-x:hover {
+      color: white;
+    }
+    .translate-x:hover::before {
+      transform: translateX(0);
+    }
+    .rotate::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: yellow;
+      top: 0;
+      left: 0;
+      transform-origin: top left;
+      transform: rotate(90deg);
+      transition: all 1s;
+      z-index: -1;
+    }
+    .rotate:hover::before {
+      transform: rotate(0);
+    }
+
+    .opacity::before {
+      content: 'scale';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: black;
+      color: white;
+      top: 0%;
+      left: 0;
+      transform: scale(1);
+      transition: all 1s;
+    }
+    .opacity:hover::before {
+      transform: scale(0);
+  </style>
+  <body>
+    <div class="btn translate-y">translateY</div>
+    <div class="btn translate-x">translateX</div>
+    <div class="btn rotate">Rotate</div>
+    <div class="btn opacity">opacity</div>
+  </body>
+</html>

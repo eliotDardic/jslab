@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>19.22</title>
+  </head>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      background: chartreuse;
+      height: 200px;
+      width: 200px;
+      position: relative;
+    }
+    .box::after {
+      content: '';
+      position: absolute;
+      background: cornflowerblue;
+      height: 200px;
+      width: 200px;
+      right: 200px;
+      transition: all 2s;
+      /* transform: translate(-200px); */
+    }
+    .box:hover::after {
+      /* position: relative; */
+      height: 200px;
+      width: 200px;
+      background: darkblue;
+      transform: translate(200px);
+      z-index: 3;
+    }
+  </style>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

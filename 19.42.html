@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>19.42</title>
+  </head>
+  <body>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        background: yellow;
+        padding: 5px;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+      }
+      li {
+        margin-left: 1rem;
+      }
+      a {
+        text-decoration: none;
+        position: relative;
+      }
+      a::after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: purple;
+        left: 0;
+        top: -2px;
+        transform: scale(0);
+        transform-origin: left;
+        transition: all 1s;
+      }
+      a::before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: purple;
+        left: 0;
+        bottom: -2px;
+        transform: scale(0);
+        transform-origin: right;
+        transition: all 1s;
+      }
+      a:hover::before,
+      a:hover::after {
+        transform: scale(1);
+      }
+    </style>
+    <nav>
+      <ul>
+        <li><a href="#">Link1</a></li>
+        <li><a href="http://">Link2</a></li>
+        <li><a href="http://">Link3</a></li>
+        <li><a href="http://">Link4</a></li>
+        <li><a href="http://">Link5</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

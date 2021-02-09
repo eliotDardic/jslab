@@ -1,16 +1,21 @@
 
-const input = require(`readline-sync`);
+ grades(a);
 
- let a = parseFloat( input.question("Enter first number: "));
- let b = parseFloat( input.question("Enter second number: "));
- makes10(a, b);
+ function grades(a) {
+     if (0 < a <  64) {
+         console.log("F");
+     } 
+     else if (65 < a <  69) {
+         console.log("D");
+     } 
+     else if (70 < a <  79) {
+         console.log("C");
+     } 
+     else if (80 < a <  89) {
+         console.log("B");
+     } 
+    else console.log ("A") 
+    }
 
- function makes10(a, b) {
-     if (a + b == 10) {
-         console.log("makes 10");
-     } else {
-         console.log("nope");
-     }
- }
 
-
+console.log (grades(88))

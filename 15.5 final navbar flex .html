@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15.5 navbar flexbox</title>
+  </head>
+  <style>
+    .nav {
+      background: indigo;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .container1 {
+      display: flex;
+      justify-content: flex-end;
+      width: 40rem;
+      height: 80rem;
+    }
+
+    .box1 {
+      /* background: hotpink; */
+      width: 100px;
+      height: 100px;
+      display: block;
+    }
+
+    .box2 {
+      /* background: blue; */
+      width: 100px;
+      height: 100px;
+      display: block;
+    }
+
+    .box3 {
+      /* background: red; */
+      width: 100px;
+      height: 100px;
+      display: block;
+    }
+    .box4 {
+      /* background: green; */
+      width: 100px;
+      height: 100px;
+      display: block;
+    }
+    .logo {
+      /* background: lightcoral; */
+      height: 100px;
+      width: 150px;
+      display: block;
+    }
+    @media (max-width: 769px) {
+      .nav {
+        background: indigo;
+        display: flex;
+        flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 100vw;
+        height: 100vh;
+      }
+      .container1 {
+        display: flex;
+        justify-content: space-between;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 40rem;
+        height: 80rem;
+      }
+
+      .box {
+        background: hotpink;
+        width: 100px;
+        height: 50px;
+        display: inline-block;
+        padding: 2rem;
+      }
+
+      .logo {
+        /* background: lightcoral; */
+        height: 50px;
+        width: 150px;
+        margin-top: 5em;
+      }
+    }
+  </style>
+  <body>
+    <div class="nav">
+      <div class="logo"><a href="#">AppleSeeds</a></div>
+      <div class="container1">
+        <div class="box"><a href="#">Home</a></div>
+        <div class="box"><a href="#">about</a></div>
+        <div class="box"><a href="#">portfolio</a></div>
+        <div class="box"><a href="#">Contact</a></div>
+      </div>
+    </div>
+  </body>
+</html>
